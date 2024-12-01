@@ -1,0 +1,16 @@
+# Ignore dataset
+dataset/
+NWPU-RESISC45/
+
+# Ignore temporary files
+*.pyc
+__pycache__/
+.DS_Store
+
+# Ignore virtual environment
+venv/
+.env/
+.idea/
+
+# Ignore models
+models/
