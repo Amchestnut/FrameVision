@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 from tensorflow.keras.optimizers import Adam
 from keras._tf_keras.keras.callbacks import EarlyStopping
 
+
 # Step 1: I will split the dataset
 def split_the_dataset(dataset_dir, output_dir):
     os.makedirs(output_dir, exist_ok=True)
@@ -57,10 +58,10 @@ def prepare_data(train_directory, validation_directory):
         # rotation_range=20,      # Randomly rotate images
         # zoom_range=0.2,         # Randomly zoom in/out
         # horizontal_flip=True    # Randomly flip images horizontally
-        rotation_range=30,
-        zoom_range=0.3,
-        width_shift_range=0.2,
-        height_shift_range=0.2,
+        rotation_range=35,
+        zoom_range=0.35,
+        width_shift_range=0.25,
+        height_shift_range=0.25,
         horizontal_flip=True,
         vertical_flip=True
     )
@@ -185,7 +186,7 @@ train_generator, val_generator = prepare_data(train_directory, val_directory)
 model = build_model()
 
 # Step 3: Train model
-history = train_model(model, train_generator, val_generator, epochs=40)
+history = train_model(model, train_generator, val_generator, epochs=100)
 
 # Step 4: Evaluate performance
 plot_history(history)

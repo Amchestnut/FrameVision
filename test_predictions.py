@@ -4,8 +4,8 @@ import numpy as np
 from keras._tf_keras.keras.preprocessing import image
 
 
-test_image_path = 'image_manual_testing/what_is_it_1.jpeg'
-model = load_model('models/resisc45_model_v2.keras')  # Replace with your saved model's path
+test_image_path = 'image_manual_testing/forest_image_test.jpeg'
+model = load_model('models/resisc45_model_v3.keras')  # Replace with your saved model's path
 
 img = image.load_img(test_image_path, target_size=(224, 224)) # Adjust target_size as needed
 img_array = image.img_to_array(img)
